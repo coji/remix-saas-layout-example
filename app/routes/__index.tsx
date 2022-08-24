@@ -8,6 +8,7 @@ import { AppSidebar } from '~/components/AppSidebar'
 
 export const loader = async ({ request }: LoaderArgs) => {
   await requireUser(request)
+  return {}
 }
 
 export default function App() {
