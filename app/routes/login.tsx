@@ -4,7 +4,7 @@ import { Box, Center, GridItem, Stack, Heading, FormControl, FormLabel, FormHelp
 import invariant from 'tiny-invariant'
 import { createUserSession } from '~/session.server'
 import { verifyLogin } from '~/models/user.server'
-
+import { GithubLink } from '~/components/GithubLink'
 export const action = async ({ request }: ActionArgs) => {
   const formData = await request.formData()
 
@@ -62,7 +62,8 @@ export default function LoginPage() {
       </Center>
 
       <Box as="footer" p="4" bgColor="white" textAlign="center">
-        Copyright&copy; TechTalk Inc.
+        <GithubLink />
+        <Box>Copyright&copy; TechTalk Inc.</Box>
       </Box>
     </Box>
   )
