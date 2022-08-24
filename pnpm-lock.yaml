@@ -24,6 +24,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-icons: ^4.4.0
+  tiny-invariant: ^1.2.0
   typescript: ^4.7.4
 
 dependencies:
@@ -43,6 +44,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
+  tiny-invariant: 1.2.0
 
 devDependencies:
   '@remix-run/dev': 1.6.8_cgxlqhaetfbjollwaaytbbpdmu

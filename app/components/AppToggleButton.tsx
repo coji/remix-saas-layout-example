@@ -1,6 +1,5 @@
 import type { IconButtonProps } from '@chakra-ui/react'
 import { Box, chakra, IconButton } from '@chakra-ui/react'
-import * as React from 'react'
 
 const Bar = chakra('span', {
   baseStyle: {
