@@ -1,5 +1,5 @@
-import { Divider, Flex, Stack, useColorModeValue } from '@chakra-ui/react'
-import { FiBarChart2, FiBookmark, FiCheckSquare, FiHelpCircle, FiSettings, FiUsers } from 'react-icons/fi'
+import { Divider, Flex, Stack, useColorModeValue, Link, HStack, Button, Icon, Text } from '@chakra-ui/react'
+import { FiBarChart2, FiBookmark, FiCheckSquare, FiHelpCircle, FiSettings, FiUsers, FiGithub } from 'react-icons/fi'
 import { AppLogo } from './AppLogo'
 import { AppNavButton } from './AppNavButton'
 import { UserProfile } from './UserProfile'
@@ -34,6 +34,13 @@ export const AppSidebar = ({ user }: AppSidebarProps) => (
           <Stack spacing="1">
             <AppNavButton label="Help" to="/help" icon={FiHelpCircle} />
             <AppNavButton label="Settings" to="/settings" icon={FiSettings} />
+
+            <Button as={Link} variant="ghost" w="full" justifyContent="start" href="https://github.com/coji/remix-saas-layout-example" target="_blank">
+              <HStack spacing="3">
+                <Icon as={FiGithub} boxSize="6" color="subtle" />
+                <Text>Github</Text>
+              </HStack>
+            </Button>
           </Stack>
 
           <Divider />
