@@ -15,21 +15,21 @@ export const AppSidebar = () => (
       py={{ base: '6', sm: '8' }}
       px={{ base: '4', sm: '6' }}
     >
-      <Stack justify="space-between" spacing="1">
+      <Stack justify="space-between" spacing="1" w="full">
         <Stack spacing={{ base: '5', sm: '6' }} shouldWrapChildren>
           <AppLogo />
           <Stack spacing="1">
-            <AppNavButton label="Home" icon={FiHome} aria-current="page" />
-            <AppNavButton label="Dashboard" icon={FiBarChart2} />
-            <AppNavButton label="Tasks" icon={FiCheckSquare} />
-            <AppNavButton label="Bookmarks" icon={FiBookmark} />
-            <AppNavButton label="Users" icon={FiUsers} />
+            <AppNavButton label="Home" to="/" icon={FiHome} />
+            <AppNavButton label="Dashboard" to="/dashboard" icon={FiBarChart2} />
+            <AppNavButton label="Tasks" to="/tasks" icon={FiCheckSquare} />
+            <AppNavButton label="Bookmarks" to="/bookmarks" icon={FiBookmark} />
+            <AppNavButton label="Users" to="/users" icon={FiUsers} />
           </Stack>
         </Stack>
         <Stack spacing={{ base: '5', sm: '6' }}>
           <Stack spacing="1">
-            <AppNavButton label="Help" icon={FiHelpCircle} />
-            <AppNavButton label="Settings" icon={FiSettings} />
+            <AppNavButton label="Help" to="/help" icon={FiHelpCircle} />
+            <AppNavButton label="Settings" to="/settings" icon={FiSettings} />
           </Stack>
 
           <Divider />
