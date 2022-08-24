@@ -1,5 +1,4 @@
 import type { LoaderArgs } from '@remix-run/node'
-import { redirect } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { requireUser } from '~/session.server'
 import { useUser } from '~/utils'
@@ -8,9 +7,7 @@ import { AppNavbar } from '~/components/AppNavbar'
 import { AppSidebar } from '~/components/AppSidebar'
 
 export const loader = async ({ request }: LoaderArgs) => {
-  const user = await requireUser(request)
-  if (!user) return redirect('/login')
-  else return user
+  await requireUser(request)
 }
 
 export default function App() {
