@@ -17,7 +17,7 @@ export default function App() {
   const isDesktop = useBreakpointValue({ base: false, lg: true })
   return (
     <Flex as="section" direction={{ base: 'column', lg: 'row' }} height="100vh" bg="bg-canvas" overflowY="auto">
-      {isDesktop ? <AppSidebar user={user} /> : <AppNavbar />}
+      {isDesktop ? <AppSidebar user={user} /> : <AppNavbar user={user} />}
 
       <Box bg="bg-surface" pt={{ base: '0', lg: '3' }} flex="1">
         <Box bg="bg-canvas" borderTopLeftRadius={{ base: 'none', lg: '2rem' }} height="full">

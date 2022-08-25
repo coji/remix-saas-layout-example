@@ -7,7 +7,7 @@ import { UserProfile } from './UserProfile'
 import type { User } from '~/models/user.server'
 
 interface AppSidebarProps {
-  user: User
+  user?: User
 }
 
 export const AppSidebar = ({ user }: AppSidebarProps) => (
@@ -38,9 +38,12 @@ export const AppSidebar = ({ user }: AppSidebarProps) => (
             <GithubLink />
           </Stack>
 
-          <Divider />
-
-          <UserProfile name={user.name} image={user.photoUrl} email={user.email} />
+          {user && (
+            <>
+              <Divider />
+              <UserProfile name={user.name} image={user.photoUrl} email={user.email} />
+            </>
+          )}
         </Stack>
       </Stack>
     </Flex>

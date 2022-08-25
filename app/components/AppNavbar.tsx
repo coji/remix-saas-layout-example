@@ -2,8 +2,12 @@ import { Box, Drawer, DrawerContent, DrawerOverlay, Flex, useColorModeValue, use
 import { AppLogo } from './AppLogo'
 import { AppSidebar } from './AppSidebar'
 import { ToggleButton } from './AppToggleButton'
+import type { User } from '~/models/user.server'
 
-export const AppNavbar = () => {
+interface AppNavbarProps {
+  user?: User
+}
+export const AppNavbar = ({ user }: AppNavbarProps) => {
   const { isOpen, onToggle, onClose } = useDisclosure()
   return (
     <Box width="full" py="4" px={{ base: '4', md: '8' }} bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
@@ -21,7 +25,7 @@ export const AppNavbar = () => {
         >
           <DrawerOverlay />
           <DrawerContent>
-            <AppSidebar />
+            <AppSidebar user={user} />
           </DrawerContent>
         </Drawer>
       </Flex>
