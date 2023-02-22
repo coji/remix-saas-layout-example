@@ -74,17 +74,10 @@ const Document = withEmotionCache(({ children }: DocumentProps, emotionCache) =>
   )
 })
 
-const theme = extendTheme(
-  {
-    colors: { ...proTheme.colors, brand: proTheme.colors.purple }
-  },
-  proTheme
-)
-
 export default function App() {
   return (
     <Document>
-      <ChakraProvider theme={theme} resetCSS>
+      <ChakraProvider resetCSS>
         <Outlet />
       </ChakraProvider>
     </Document>
